@@ -90,7 +90,7 @@ button{font:inherit;letter-spacing:inherit;color:inherit;background:none;border:
 .sel .r button{font:inherit;text-align:left}
 
 /* Archive */
-.bar{display:flex;justify-content:space-between;padding:0 var(--pad) 16px}
+.bar{display:flex;justify-content:space-between;align-items:flex-start;padding:0 var(--pad) 16px}
 #v-archive,#v-prints,#v-about,.vw{padding-top:calc(var(--hdh) + 36px)}
 .arch{margin-bottom:24px;display:grid;grid-template-columns:1fr 1fr;gap:0 14px;padding:0 var(--pad);margin-top:6px;border-top:1px solid var(--line)}
 .arch ol{list-style:none}
@@ -104,7 +104,7 @@ button{font:inherit;letter-spacing:inherit;color:inherit;background:none;border:
 
 /* Prints / Digital Files：統一圖框，名稱、規格、價格、按鈕橫向對齊 */
 .ptabs{display:flex;gap:22px}
-.ptabs button{text-transform:uppercase;letter-spacing:.03em;color:var(--mute);padding-bottom:3px;border-bottom:1px solid transparent}
+.ptabs button{line-height:1.38;text-transform:uppercase;letter-spacing:.03em;color:var(--mute);padding-bottom:3px;border-bottom:1px solid transparent}
 .ptabs button[aria-pressed=true]{color:var(--ink);border-bottom-color:var(--ink)}
 .pintro{padding:0 var(--pad);margin:0 0 22px;max-width:36em;font:400 15px/1.45 var(--serif)}
 .pintro:empty{display:none}
