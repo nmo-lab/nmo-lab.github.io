@@ -1,0 +1,31 @@
+{
+  "title": "After Rain",
+  "date": "2025/09",
+  "layout": "grid3",
+  "works": {
+    "c05-01.jpg": {
+      "title": "Street Corner",
+      "type": "digital",
+      "price": "NT$ 450",
+      "desc": "雨停之後的街角，地面反光是畫面的主角。",
+      "spec": "JPG, Three Crops Included, Personal Use Licence",
+      "buy": "https://example.com/buy/4"
+    },
+    "c02-01.jpg": {
+      "title": "Night Tram",
+      "type": "physical",
+      "price": "NT$ 3,600",
+      "desc": "末班電車經過時的長曝光。",
+      "spec": "A2, Cotton Rag Paper, Custom Sizes on Request",
+      "buy": "https://example.com/buy/5"
+    },
+    "c09-01.jpg": {
+      "title": "City Palette",
+      "type": "digital",
+      "price": "NT$ 600",
+      "desc": "整理自個人修圖流程的調色預設。",
+      "spec": "12 Presets, Lightroom Classic and CC, Install Guide Included",
+      "buy": "https://example.com/buy/6"
+    }
+  }
+}

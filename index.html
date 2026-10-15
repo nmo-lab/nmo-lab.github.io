@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NMO-LAB, Photography</title>
+<meta name="description" content="NMO-LAB photography: archival prints and digital files.">
+<meta name="theme-color" content="#ffffff">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=EB+Garamond:wght@400;500&family=IBM+Plex+Mono:wght@400&family=Noto+Sans+TC:wght@400;500&family=Noto+Serif+TC:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<!--
+  index.html 只放「結構」。
+  · 外觀 → assets/style.css
+  · 行為 → assets/app.js
+  · 作品與網站設定 → data/*.json（作品由 scripts/build.mjs 從 img/ 資料夾自動產生）
+-->
+<header class="hd up">
+  <div class="l">
+    <a id="name" href="#/" aria-label="Home"></a>
+    <button type="button" class="back" id="back" hidden>← Back</button>
+  </div>
+  <div>
+    <div>Enquiries</div>
+    <a id="mail"></a>
+  </div>
+</header>
+<div id="ctr">
+  <div class="tgl up">
+    <button type="button" id="b-ovw" aria-pressed="true">Overview</button>
+    <span>/</span>
+    <button type="button" id="b-idx" aria-pressed="false">Index</button>
+  </div>
+</div>
+<div id="pline" hidden></div>
+
+<div class="page">
+<section id="v-work"><div id="ov"></div><div id="grid" hidden></div></section>
+<section id="v-project" hidden></section>
+
+<section id="v-archive" hidden>
+  <div class="bar up">
+    <span>Archive</span>
+    <button type="button" class="fbtn"></button>
+  </div>
+  <div class="arch">
+    <ol id="alist"></ol>
+    <aside class="pv">
+      <div class="mono" id="pv-n"></div>
+      <img id="pv-img" alt="">
+      <div id="pv-c"></div>
+      <div class="pvp" id="pv-p"></div>
+      <div class="pacts" id="pv-a"></div>
+    </aside>
+  </div>
+</section>
+
+<section id="v-prints" hidden>
+  <div class="bar up">
+    <div id="ptabs" class="ptabs" role="group" aria-label="Product type"></div>
+    <button type="button" class="fbtn"></button>
+  </div>
+  <p id="pintro" class="pintro serif"></p>
+  <div id="pl"></div>
+</section>
+
+<section id="v-sheet" class="vw" hidden></section>
+<section id="v-bag" class="vw" hidden></section>
+<section id="v-checkout" class="vw" hidden></section>
+<section id="v-order" class="vw" hidden></section>
+
+<section id="v-about" hidden>
+  <img class="hero" id="a-img" alt="">
+  <div class="two">
+    <div class="up">About</div>
+    <div class="tx" id="a-txt"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="up">Newsletter</div>
+  <div>
+    <p style="max-width:28em">Subscribe for the Dispatch: new work, print releases and the notes behind the pictures.</p>
+    <form class="nl" id="nl">
+      <input type="email" placeholder="Email" aria-label="Email" required>
+      <button class="up">Submit</button>
+    </form>
+  </div>
+
+  <div class="full serif" style="font-size:14px;line-height:1.45">
+    <span>© All Rights Reserved</span><br>
+    <span>Further information and full resolution images can be requested via email</span>
+  </div>
+  <div class="full frow">
+    <span class="mono mute" id="clock"></span>
+    <button type="button" id="f-top" class="up">↑ Top</button>
+  </div>
+</footer>
+</div>
+
+<div id="toast" role="status" aria-live="polite"></div>
+<button type="button" id="top" class="up" aria-label="Back to top">↑ Top</button>
+<nav id="dock" class="up" aria-label="Main"></nav>
+
+<div id="scrim"></div>
+<aside class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Work details">
+  <div class="r1"><span class="mono" id="s-idx"></span>
+    <button type="button" class="up cl">Close</button>
+  </div>
+  <h3 id="s-title"></h3>
+  <div class="stat up" id="s-stat" hidden></div>
+  <div class="b"><div class="up">Context</div><p id="s-desc"></p></div>
+  <div class="b"><div class="up">Specifications</div><p id="s-spec"></p></div>
+  <div class="b" id="s-optrow" hidden><div class="up">Option</div><div><select id="s-opt" aria-label="Option"></select></div></div>
+  <div class="b"><div class="up">Price</div><p id="s-price"></p></div>
+  <div class="act">
+    <button type="button" class="buy" id="s-bag"></button>
+    <a class="buy" id="s-enq" hidden></a>
+  </div>
+  <div class="act sub2">
+    <a id="s-now" target="_blank" rel="noopener" hidden></a>
+    <button type="button" id="s-add"></button>
+  </div>
+  <div class="pols" id="s-pol"></div>
+</aside>
+<div id="psheet"></div>
+
+<!-- build:seo:start -->
+<!-- 這一段由 build 腳本自動填入（無 JavaScript 與搜尋引擎用的作品清單）。請勿手改。 -->
+<!-- build:seo:end -->
+
+<script src="assets/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+{
+  "name": "NMO-LAB",
+  "description": "NMO-LAB photography: archival prints and digital files.",
+  "url": "",
+  "email": "info@nmolab.com",
+  "instagram": "@nmo.lab",
+  "newsletter": "",
+  "timezone": "Asia/Taipei",
+  "tzLabel": "TPE",
+  "thumbsInset": false,
+  "gridFit": "contain",
+  "aboutImg": "img/photo1_2.jpg",
+  "types": {
+    "physical": {
+      "label": "Prints",
+      "btn": "Purchase Print",
+      "ord": "Order Print",
+      "ships": true,
+      "intro": "Archival pigment prints on cotton rag paper, signed and numbered. Ships in 3–5 business days."
+    },
+    "digital": {
+      "label": "Digital Files",
+      "btn": "Purchase Download",
+      "ord": "Order Download",
+      "ships": false,
+      "intro": "High-resolution files delivered by email after payment is confirmed. Personal use licence."
+    }
+  },
+  "about": {
+    "intro": "台北攝影師，專注於街頭、城市與自然光。每件作品都能以手工裝裱的實體相紙收藏，或下載高解析數位檔。\n\n作品以藝術微噴與棉質相紙輸出，每份附簽名與編號。\n\n也承接少量商業與編輯合作。",
+    "sections": [
+      {
+        "title": "Contact",
+        "lines": [
+          "Email　info@nmolab.com",
+          "Instagram　@nmo.lab"
+        ]
+      }
+    ]
+  },
+  "currency": "NT$",
+  "shipping": {
+    "zones": [
+      {
+        "id": "tw",
+        "label": "Taiwan",
+        "fee": 100,
+        "freeOver": 3000
+      },
+      {
+        "id": "intl",
+        "label": "International",
+        "fee": 600
+      }
+    ]
+  },
+  "checkout": {
+    "endpoint": "",
+    "extraFields": {},
+    "replyWithin": "2 business days",
+    "refPrefix": "NMO",
+    "requestNote": "You will not be charged yet.",
+    "paymentInfo": "付款方式（銀行轉帳、PayPal 或付款連結）會在確認訂單後以電子郵件通知。請把這段換成你實際的付款說明。",
+    "requireTerms": true
+  },
+  "policies": [
+    {
+      "title": "Printing & Shipping",
+      "text": "每張相紙手工包裝，確認付款後 3 至 5 個工作天內寄出，以硬挺紙筒或平板包裝；可客製尺寸與裝裱，歡迎來信詢問。國際運送的關稅由收件人負擔。數位檔案以電子郵件交付，不需運費。（範例文字，請改成你的實際規則）"
+    },
+    {
+      "title": "Returns",
+      "text": "商品若於運送中受損，請在收到後 7 天內附照片來信，我們會補寄或退款。數位檔案一旦交付，恕不退款。（範例文字，請依你的實際政策與當地法規調整）"
+    },
+    {
+      "title": "Authenticity",
+      "text": "限量版相紙皆附簽名與編號，並附真品證明卡。（範例文字，請改成你的實際做法）"
+    }
+  ]
+}

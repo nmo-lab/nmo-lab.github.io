@@ -1,0 +1,19 @@
+{
+  "name": "nmo-lab",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "NMO-LAB photography shop (static site).",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/build.mjs --strict",
+    "dev": "node scripts/build.mjs && node scripts/serve.mjs",
+    "resize": "node scripts/resize.mjs"
+  },
+  "optionalDependencies": {
+    "sharp": "^0.35.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

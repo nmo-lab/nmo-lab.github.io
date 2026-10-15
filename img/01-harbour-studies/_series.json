@@ -1,0 +1,67 @@
+{
+  "title": "Harbour Studies",
+  "date": "2026/06",
+  "layout": "hero",
+  "note": "2024 年起在基隆港拍攝的系列。",
+  "defaults": {
+    "type": "physical",
+    "spec": "A3, Archival Pigment Print, Edition of 20"
+  },
+  "works": {
+    "ne02_01.jpg": {
+      "title": "Harbour, Early Morning",
+      "price": "NT$ 3,200",
+      "desc": "拍攝於清晨六點的基隆港。霧氣尚未散去，船隻的輪廓在光線裡慢慢浮現。",
+      "spec": "A3, Archival Pigment Print, Edition of 20, Signed and Numbered",
+      "buy": "https://example.com/buy/1",
+      "edition": 20,
+      "sold": 7,
+      "options": [
+        {
+          "label": "A3 · Unframed",
+          "price": 3200
+        },
+        {
+          "label": "A3 · Framed",
+          "price": 4400
+        },
+        {
+          "label": "A2 · Unframed",
+          "price": 5200
+        }
+      ]
+    },
+    "nn01_02.jpg": {
+      "title": "Mooring Lines",
+      "price": "NT$ 2,800",
+      "desc": "碼頭邊的繩索，傍晚逆光。",
+      "spec": "A3, Cotton Rag Paper, Unframed",
+      "buy": "https://example.com/buy/2",
+      "edition": 20,
+      "sold": 3
+    },
+    "nn04.jpg": {
+      "title": "Harbour, Digital",
+      "type": "digital",
+      "price": "NT$ 450",
+      "desc": "同系列的數位檔版本。",
+      "spec": "JPG, 6000 px Long Edge, Personal Use Licence",
+      "buy": "https://example.com/buy/3"
+    },
+    "nn03_02.jpg": {
+      "title": "Fog Over Water",
+      "price": "NT$ 3,000",
+      "desc": "海面起霧的十分鐘。",
+      "buy": "https://example.com/buy/7",
+      "status": "reserved"
+    },
+    "nn02_01.jpg": {
+      "title": "Quay at Dusk",
+      "price": "NT$ 3,000",
+      "desc": "日落後碼頭的最後一道光。",
+      "buy": "https://example.com/buy/8",
+      "edition": 20,
+      "sold": 20
+    }
+  }
+}
