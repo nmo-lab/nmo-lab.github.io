@@ -229,13 +229,13 @@ select{font:inherit;color:inherit;background:transparent;border:1px solid var(--
 .shopv .act.tools{max-width:none;margin:0 0 22px}
 
 .co{display:grid;grid-template-columns:1fr;gap:26px}
-.cof fieldset{border:0;border-top:1px solid var(--line);padding:14px 0 6px;margin:0 0 6px}
-.cof legend{padding-right:10px;color:var(--mute)}
+.cof fieldset{border:0;border-top:1px solid var(--ink);padding:16px 0 6px;margin:0 0 30px}
+.cof legend{padding-right:12px;color:var(--ink);font-weight:600;font-size:13px;letter-spacing:.04em}
 .f{display:block;margin:0 0 14px}
 .f>span{display:block;color:var(--mute);margin-bottom:2px}
-.f input,.f textarea,.f select{width:100%;border:0;border-bottom:1px solid var(--ink);background:none;font:inherit;font-size:14px;padding:6px 0;outline:0;border-radius:0;resize:vertical}
-.f select{border:0;border-bottom:1px solid var(--ink);padding-left:0}
-.f input:focus,.f textarea:focus,.f select:focus{border-bottom-width:2px}
+.f input,.f textarea,.f select{width:100%;border:0;border-bottom:1px solid var(--line);background:none;font:inherit;font-size:14px;padding:6px 0;outline:0;border-radius:0;resize:vertical}
+.f select{border:0;border-bottom:1px solid var(--line);padding-left:0}
+.f input:focus,.f textarea:focus,.f select:focus{border-bottom:1px solid var(--ink)}
 .chk{display:flex;gap:10px;align-items:flex-start;margin:12px 0 6px;font-size:13px}
 .chk input{margin-top:3px}
 .pol,.pols{margin:8px 0 14px}
@@ -320,7 +320,16 @@ button{-webkit-tap-highlight-color:transparent}
 @media(min-width:760px){.hero{height:340px}.two .tx p,.ab p,.ab .li,.rd,.ah h3,.ah button{font-size:13px}}
 
 .bl:last-child{border-bottom:0}
-@media(max-width:899px){.cos{order:-1;margin-bottom:6px}}
+@media(max-width:899px){.cos{display:none}}
+@media(min-width:900px){.cosm,.cosb{display:none}}
+.cosm{border:1px solid var(--line);padding:0;margin:0 0 4px;background:#fafafa}
+.cosm summary{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 12px;font-weight:600}
+.cosm summary::after{content:"▾";margin-left:8px;color:var(--ink)}
+.cosm[open] summary::after{content:"▴"}
+.cosm summary>span:nth-child(2){margin-left:auto;font-variant-numeric:tabular-nums}
+.cosm>div{padding:0 12px 14px}
+.cosb{margin:22px 0 8px;padding-top:0}
+.cosb h2{font:500 12px var(--sans);margin-bottom:8px}
 @media(max-width:759px){.pv{position:static}}
 
 .empty{padding:6px 0 0}

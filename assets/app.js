@@ -520,6 +520,7 @@ function summaryHTML(zoneId) {
     <div class="srow"><span>Shipping</span><span>${shipTxt}</span></div>
     <div class="srow tot"><span>Total</span><span>${total}</span></div>`;
 }
+const totalText = (zoneId) => { const s = shipFor(zoneId), sub = subtotal(); return s.fee == null ? `${money(sub)} + shipping` : money(sub + s.fee); };
 function renderCheckout() {
   const inner = shopView("#v-checkout", "Checkout");
   const saved = store.get("customer", {});
@@ -527,7 +528,8 @@ function renderCheckout() {
   const field = (label, name, attrs, tag) => `<label class="f"><span class="up">${label}</span>${tag === "textarea" ? `<textarea name="${name}" ${attrs || ""}>${esc(saved[name] || "")}</textarea>` : `<input name="${name}" value="${esc(saved[name] || "")}" ${attrs || ""}>`}</label>`;
   const emailMode = !CK.endpoint;
   const wrap = el("div", "co");
-  wrap.innerHTML = `<form id="co" class="cof">
+  wrap.innerHTML = `<details class="cosm"><summary><span>Order summary (${bagCount()})</span><span id="co-tot"></span></summary><div id="co-sum-m"></div></details>
+  <form id="co" class="cof">
     <fieldset><legend class="up">1 · Contact</legend>
       ${field("Name *", "name", 'required autocomplete="name"')}
       ${field("Email *", "email", 'type="email" required autocomplete="email"')}
@@ -545,13 +547,17 @@ function renderCheckout() {
       <label class="f"><span class="up">Message (optional)</span><textarea name="note" rows="3" placeholder="Framing, gift note, deadline…"></textarea></label>
     </fieldset>
     ${CK.requireTerms && POLICIES.length ? `<label class="chk"><input type="checkbox" name="terms" required> <span>I have read the shipping and returns information.</span></label><div class="pol">${policiesHTML()}</div>` : ""}
+    <div class="cosb"><h2 class="up">Order summary</h2><div id="co-sum-b"></div></div>
     <button type="submit" class="buy sub">${emailMode ? "Continue — Send by Email" : "Place Order Request"}</button>
     <p class="vnote" id="co-msg" role="status" aria-live="polite">${esc(CK.requestNote || "You will not be charged yet.")} We reply within ${esc(CK.replyWithin)} to confirm availability and send payment instructions.</p>
   </form>
   <aside class="cos"><h2 class="up">Order summary</h2><div id="co-sum"></div><a class="u2" href="#/bag">Edit Bag</a></aside>`;
   inner.appendChild(wrap);
   const form = $("#co"), sumEl = $("#co-sum");
-  const upd = () => { sumEl.innerHTML = summaryHTML(form.elements.zone ? form.elements.zone.value : ""); };
+  const upd = () => {
+    const z = form.elements.zone ? form.elements.zone.value : "", h = summaryHTML(z);
+    sumEl.innerHTML = h; $("#co-sum-m").innerHTML = h; $("#co-sum-b").innerHTML = h; $("#co-tot").textContent = totalText(z);
+  };
   upd(); if (form.elements.zone) form.elements.zone.onchange = upd;
   form.onsubmit = (e) => { e.preventDefault(); placeOrder(form); };
 }
